@@ -1,1 +1,12 @@
 :__merge{\part{\__jsRequire{scopes/html}}{scope}}
+:defun{doctype}{theDoctype}
+	{{<!DOCTYPE }}\theDoctype\ {{>}}
+:def{html5doctype}{{<!DOCTYPE HTML>}}
+:defTag{html}
+:defTag{head}
+:defTag{style}
+:defTag{title}
+:defTag{body}
+:defTag{div}
+:defTag{pre}
+:defTag{code}

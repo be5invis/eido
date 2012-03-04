@@ -24,7 +24,6 @@ scope.input = function(file){
 scope.dirName = path.dirname;
 scope.execPath = process.argv[1];
 scope.inputPath = path.normalize(process.argv[2]);
-scope.cwd = process.cwd();
 scope.getRelativePath = path.relative;
 scope.getAbsolutePath = path.resolce;
 scope.pathNoExt = function(s){return s.replace(/\.\w+$/, '')}
@@ -37,7 +36,13 @@ function parseFile(file){
 };
 
 var workingScope = fork(scope);
-if(path.existsSync('.common/default.ed')){
-	workingScope.__transform(parseFile('.common/default.ed'));
-}
+workingScope.workingScope = workingScope;
+var cwd = path.dirname(scope.inputPath);
+do {
+	if(path.existsSync(path.join(cwd, '.common/default.ed'))){
+		workingScope.__transform(parseFile(path.join(cwd, '.common/default.ed')));
+		scope.cwd = cwd;
+		break;
+	}
+} while(cwd !== (cwd = path.join(cwd, '..')));
 workingScope.__transform(parseFile(process.argv[2]));

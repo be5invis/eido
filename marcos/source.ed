@@ -1,0 +1,3 @@
+:__merge{\part{\__jsRequire{scopes/source}}{scope}}
+:langdef_{js=javascript}
+:langdef_{moe}
