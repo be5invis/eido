@@ -24,6 +24,7 @@ scope.input = function(file){
 scope.dirName = path.dirname;
 scope.execPath = process.argv[1];
 scope.inputPath = path.normalize(process.argv[2]);
+scope.normalizePath = path.normalize;
 scope.getRelativePath = path.relative;
 scope.getAbsolutePath = path.resolce;
 scope.pathNoExt = function(s){return s.replace(/\.\w+$/, '')}
