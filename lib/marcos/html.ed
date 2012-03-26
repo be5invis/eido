@@ -2,11 +2,20 @@
 :defun{doctype}{theDoctype}
 	{{<!DOCTYPE }}\theDoctype\ {{>}}
 :def{html5doctype}{{<!DOCTYPE HTML>}}
+:def{utf8meta}{{<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />}}
 :defTag{html}
 :defTag{head}
 :defTag{style}
 :defTag{title}
 :defTag{body}
 :defTag{div}
+:defTag{blockquote}
+:defTag{ul}
+:defTag{ol}
+:defTag{li}
+:defTag{dl}
+:defTag{dt}
+:defTag{dd}
+:defTag{table}
 :defTag{pre}
 :defTag{code}
