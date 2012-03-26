@@ -1,5 +1,5 @@
-var gscope = require('scope').scope;
-var processor = require('processor');
+var processor = require('../lib/processor');
+var gscope = require('../lib/scope').scope;
 var fork = processor.fork;
 var parse = processor.parse;
 var path = require('path');

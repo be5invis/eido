@@ -1,1 +1,1 @@
-:__merge{\part{\__jsRequire{scopes/util}}{scope}}
+:__merge{\part{\__jsRequire{../lib/scopes/util}}{scope}}

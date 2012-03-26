@@ -1,4 +1,4 @@
-:__merge{\part{\__jsRequire{scopes/html}}{scope}}
+:__merge{\part{\__jsRequire{../lib/scopes/html}}{scope}}
 :defun{doctype}{theDoctype}
 	{{<!DOCTYPE }}\theDoctype\ {{>}}
 :def{html5doctype}{{<!DOCTYPE HTML>}}

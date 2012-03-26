@@ -6,9 +6,3 @@
 ~*
 *.lf.js
 .vim/
-
-webtest/*
-dist/*
-*/node_modules/*
-doc/*
-!doc/rc/*
