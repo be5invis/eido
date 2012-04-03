@@ -1,3 +1,2 @@
 :__merge{\part{\__jsRequire{../lib/scopes/source}}{scope}}
-:langdef_{js=javascript}
-:langdef_{moe}
+:useLanguage{js=javascript}

@@ -15,16 +15,17 @@ scope.execPath = path.resolve(process.argv[1]);
 scope.inputPath = path.normalize(process.argv[2]);
 scope.normalizePath = path.normalize;
 scope.getRelativePath = path.relative;
-scope.getAbsolutePath = path.resolce;
+scope.getAbsolutePath = path.resolve;
 scope.pathNoExt = function(s){return s.replace(/\.\w+$/, '')}
 
 var workingScope = fork(scope);
 workingScope.workingScope = workingScope;
-var cwd = path.dirname(scope.inputPath);
+var cwd = path.resolve(path.dirname(scope.inputPath));
 do {
+//	console.log(cwd);
 	if(path.existsSync(path.resolve(cwd, '.common/default.ed'))){
+		scope.cwd = path.resolve(cwd);
 		workingScope.input(path.resolve(cwd, '.common/default.ed'));
-		scope.cwd = cwd;
 		break;
 	};
 } while(cwd !== (cwd = path.resolve(cwd, '..')));
