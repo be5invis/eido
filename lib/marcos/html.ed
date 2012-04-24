@@ -16,7 +16,8 @@
 :defTag{dl}
 :defTag{dt}
 :defTag{dd}
-:defTag{table}
+:defTag{span}
+
 
 :defPreTag{pre}
 :defPreTag{code}
