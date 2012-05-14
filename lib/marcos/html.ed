@@ -16,8 +16,34 @@
 :defTag{dl}
 :defTag{dt}
 :defTag{dd}
-:defTag{span}
+:defTag{p}
+:defTag{h1}
+:defTag{h2}
+:defTag{h3}
+:defTag{h4}
+:defTag{h5}
+:defTag{h6}
 
+:defTag{span}
+:defTag{sup}
+:defTag{sub}
+:defTag{a}
+:defTag{q}
+:defTag{b}
+:defTag{i}
+:defTag{strong}
+:defTag{em}
+:defTag{abbr}
+:defTag{arconym}
+
+:defTag{_}{sub}
+:defTag{^}{sup}
+
+|def{br}
+	<br />
+
+:defun{&}{id}
+	:"{&\id;}
 
 :defPreTag{pre}
 :defPreTag{code}

@@ -29,4 +29,5 @@ do {
 		break;
 	};
 } while(cwd !== (cwd = path.resolve(cwd, '..')));
+scope.inputFileStats = fs.statSync(process.argv[2]);
 workingScope.input(process.argv[2]);
