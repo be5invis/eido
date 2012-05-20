@@ -6,3 +6,4 @@
 ~*
 *.lf.js
 .vim/
+node_modules/
