@@ -1,2 +1,10 @@
 :__merge{\part{\__jsRequire{../lib/scopes/source}}{scope}}
 :useLanguage{js=javascript}
+:useLanguage{java}
+:useLanguage{python}
+:useLanguage{scala}
+:useLanguage{ruby}
+:useLanguage{css}
+:useLanguage{xml}
+:useLanguage{avrasm}
+:useLanguage{cs}
