@@ -3,7 +3,7 @@
 
 var processor = require('../lib/processor');
 var fork = processor.fork;
-var gscope = require('../lib/scope').scope;
+var gscope = require('../lib/loader').scope;
 var path = require('path');
 var fs = require('fs')
 
