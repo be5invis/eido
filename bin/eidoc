@@ -5,7 +5,9 @@ var processor = require('../lib/processor');
 var fork = processor.fork;
 var gscope = require('../lib/loader').scope;
 var path = require('path');
-var fs = require('fs')
+var fs = require('fs');
+
+var existsSync = fs.existsSync || path.existsSync;
 
 var scope = fork(gscope);
 
@@ -23,7 +25,7 @@ workingScope.workingScope = workingScope;
 var cwd = path.resolve(path.dirname(scope.inputPath));
 do {
 //	console.log(cwd);
-	if(path.existsSync(path.resolve(cwd, '.common/default.ed'))){
+	if(existsSync(path.resolve(cwd, '.common/default.ed'))){
 		scope.cwd = path.resolve(cwd);
 		workingScope.input(path.resolve(cwd, '.common/default.ed'));
 		break;
