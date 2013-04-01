@@ -1,10 +1,10 @@
 { "name": "eido"
-, "version": "4.66.9201"
+, "version": "4.66.92016"
 , "author": "Belleve Invis"
 , "description": "Advanced Documentation Generation Tool"
 , "homepage": "http://github.com/be5invis/eido"
 , "engines": ["node >= 0.8.0"]
 , "main": "lib/main"
 , "bin" : {"eidoc": "./bin/eidoc"}
-, "dependencies": ["hljs"]
+, "dependencies": ["highlight.js"]
 }
