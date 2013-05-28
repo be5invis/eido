@@ -10,11 +10,17 @@ var fs = require('fs');
 var existsSync = fs.existsSync || path.existsSync;
 
 var scope = fork(gscope);
+if(process.argv[3] === '-DEBUG') {
+	processor.setDebug(true);
+	process.argv[3] = undefined;
+}
+
+var argv = process.argv.slice(0, 3);
 
 // These functions are compilation-specific.
 scope.dirName = path.dirname;
-scope.execPath = path.resolve(process.argv[1]);
-scope.inputPath = path.normalize(process.argv[2]);
+scope.execPath = path.resolve(argv[1]);
+scope.inputPath = path.normalize(argv[2]);
 scope.normalizePath = path.normalize;
 scope.getRelativePath = path.relative;
 scope.getAbsolutePath = path.resolve;
@@ -31,5 +37,5 @@ do {
 		break;
 	};
 } while(cwd !== (cwd = path.resolve(cwd, '..')));
-scope.inputFileStats = fs.statSync(process.argv[2]);
-workingScope.input(process.argv[2]);
+scope.inputFileStats = fs.statSync(argv[2]);
+workingScope.input(argv[2]);
